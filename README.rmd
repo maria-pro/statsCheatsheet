@@ -2,6 +2,7 @@
 
 # Linear regression:
 
+
 ## standard error 
 "typical" distance between the estimated and the "true" coefficient.
 
@@ -30,9 +31,44 @@
 
 * if the p-value is very low, then there is a higher probability that you're seeing data that is counter-indicative of zero effect. In other situations, you can get a p-value based on other statistics and variables.
 
+# Diagnostic of regression
+## fitted.values
+
+`model$fitted.values`: = PRED	= Unstandardized predicted values.
+
+ZPRED= Standardized predicted values.
+`scale(x, center = TRUE, scale = TRUE)` = `scale(model$fitted.values)`
+
+Check: Linearity, Homogeneity of Error Variance = scale(model$fitted.values) 
+
+## Residuals
+
+`model$residuals`
+RESID	Unstandardized residuals.	Linearity, Homogeneity of Error Variance, Outliers
+ZRESID	Standardized residuals.
+
+
+Standardized variables (either the predicted values or the residuals) have a mean of zero and standard deviation of one. If residuals are normally distributed, then 95% of them should fall between -2 and 2. If they fall above 2 or below -2, they can be considered unusual.
+
+## tests
+### Testing Nonlinearity: 
+* the relationship between the response variable and the predictors is linear. 
+
+
+Keyword	Description	Assumption Checked
+
+
+LEVER	Centered leverage values.	Unusual and Influential Data
+COOK	Cook’s distances.
+DFBETA	DF Beta
+
 the null hypothesis is that the true coefficient is zero; if that probability is low, it's suggesting that it would be rare to get a result as unusual as this if the coefficient were really zero.
 
 ***
-**Residuals
+## Residuals
+
+* The difference between the observed value of the dependent variable (y) and the predicted value (ŷ) is called the residual (e). Each data point has one residual. Both the sum and the mean of the residuals are equal to zero.
+
+<
 
       Min        1Q    Median        3Q       Max 
