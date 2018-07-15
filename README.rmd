@@ -2,7 +2,7 @@
 
 Linear regression:
 
-##standard error 
+## standard error 
 "typical" distance between the estimated and the "true" coefficient.
 
 ** standard deviaion of the sampling distribution of the estimate of the coefficient (e.g. standard error of variable X)
@@ -12,7 +12,7 @@ Linear regression:
 
 **High standard errors**: you can't estimate the coefficient precisely, the 'true' coefficient is very far away from  the estimated value 
 
-##`t-statistic`:
+## t-statistic
 
 * the coefficient divided by its standard error
 * a measure of the precision with which the regression coefficient is measured.
