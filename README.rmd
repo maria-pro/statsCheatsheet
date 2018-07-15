@@ -2,19 +2,16 @@
 
 Linear regression:
 
-`standard error`: "typical" distance between the estimated and the "true" coefficient.
+*`standard error`: "typical" distance between the estimated and the "true" coefficient.
 
--- standard deviaion of the sampling distribution of the estimate of the coefficient (e.g. standard error of variable X)
+** standard deviaion of the sampling distribution of the estimate of the coefficient (e.g. standard error of variable X)
 
--- an estimate of the variance of the strength of the effect, 
+** an estimate of the variance of the strength of the effect, 
 = the strength of the relationship between each causal variable and the predicted variable. 
 
-High standard errors: you can't estimate the coefficient precisely, the 'true' coefficient is very far away from  the estimated value (the standard error is like a 'typical distance' away)
+**High standard errors**: you can't estimate the coefficient precisely, the 'true' coefficient is very far away from  the estimated value 
 
-
-
-If it's high, then the effect size will have to be stronger for us to be able to be sure that it's a real effect, and not just an artefact of randomness.
-
-The t-statistic is an estimate of how extreme the value you see is, relative to the standard error (assuming a normal distribution, centred on the null hypothesis).
+*`t-statistic`:
+* an estimate of how extreme the value you see is, relative to the standard error (assuming a normal distribution, centred on the null hypothesis).
 
 The p-value is an estimate of the probability of seeing a t-value as extreme, or more extreme the one you got, if you assume that the null hypothesis is true (the null hypothesis is usually "no effect", unless something else is specified). So if the p-value is very low, then there is a higher probability that you're seeing data that is counter-indicative of zero effect. In other situations, you can get a p-value based on other statistics and variables.
