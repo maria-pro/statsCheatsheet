@@ -1,6 +1,6 @@
 # Cheatsheet on common stats
 
-Linear regression:
+# Linear regression:
 
 ## standard error 
 "typical" distance between the estimated and the "true" coefficient.
@@ -20,10 +20,19 @@ Linear regression:
 
 ## p-value 
 
-*an estimate of the probability of seeing a t-value as extreme, or more extreme the one you got
+* an estimate of the probability of seeing a t-value as unusual as the one you obtained, if the null hypothesis were true. 
+
+* low p-value: all is good = effect is present, low chances to obtain this coefficient, if the relationship does not exist (the coefficient is 0)
 
 ## null hypothesis 
 
-* is usually "no effect", unless something else is specified
+* is usually "no effect", unless something else is specified = the true coefficient is zero
 
 * if the p-value is very low, then there is a higher probability that you're seeing data that is counter-indicative of zero effect. In other situations, you can get a p-value based on other statistics and variables.
+
+the null hypothesis is that the true coefficient is zero; if that probability is low, it's suggesting that it would be rare to get a result as unusual as this if the coefficient were really zero.
+
+***
+**Residuals
+
+      Min        1Q    Median        3Q       Max 
