@@ -34,21 +34,45 @@
 # Diagnostic of regression
 ## fitted.values
 
-`model$fitted.values`: = PRED	= Unstandardized predicted values.
+`model$fitted.values`: PRED	= Unstandardized predicted values.
 
-ZPRED= Standardized predicted values.
+ZPRED = Standardized predicted values.
 `scale(x, center = TRUE, scale = TRUE)` = `scale(model$fitted.values)`
 
-Check: Linearity, Homogeneity of Error Variance = scale(model$fitted.values) 
+**Check**: Linearity, Homogeneity of Error Variance = scale(model$fitted.values) 
 
 ## Residuals
 
-`model$residuals`
-RESID	Unstandardized residuals.	Linearity, Homogeneity of Error Variance, Outliers
+`model$residuals`: RESID = Unstandardized residuals.	
+
 ZRESID	Standardized residuals.
 
+**Check**: Linearity, Homogeneity of Error Variance, Outliers
 
 Standardized variables (either the predicted values or the residuals) have a mean of zero and standard deviation of one. If residuals are normally distributed, then 95% of them should fall between -2 and 2. If they fall above 2 or below -2, they can be considered unusual.
+
+# LEVER	Centered leverage values.	Unusual and Influential Data
+
+## Additional measures
+
+`cooks.distance(model)`: Cook's distance (hat statistics)
+
+* calculated for each observation by comparing the results of the regression with that observation included to the results when that particular observation is removed. 
+
+
+
+**Check**: Unusual and Influential Data
+
+
+COOK	Cook’s distances.
+DFBETA	DF Beta
+
+
+Residual standard error: 37780000 on 693 degrees of freedom
+  (10 observations deleted due to missingness)
+Multiple R-squared:  0.009204,	Adjusted R-squared:  -0.01367 
+F-statistic: 0.4024 on 16 and 693 DF,  p-value: 0.9821
+
 
 ## tests
 ### Testing Nonlinearity: 
@@ -58,9 +82,7 @@ Standardized variables (either the predicted values or the residuals) have a mea
 Keyword	Description	Assumption Checked
 
 
-LEVER	Centered leverage values.	Unusual and Influential Data
-COOK	Cook’s distances.
-DFBETA	DF Beta
+
 
 the null hypothesis is that the true coefficient is zero; if that probability is low, it's suggesting that it would be rare to get a result as unusual as this if the coefficient were really zero.
 
